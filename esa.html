@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+    <title>Employee Salary Allowances</title>
+    <script> 
+        function btnFind_onclick(){
+//  alert('a');
+            var sal,hra,da,pf,gp,np;
+            sal=hra=da=pf=gp=np=0;
+            sal=numsal.value;
+            sal=parseFloat(sal);
+
+            hra=sal*15.0/100;
+            da=sal*20.0/100;
+            pf=sal*35.0/100;
+            gp=sal+hra+da;      
+            np=gp-pf;
+
+            tbxhra.value=hra;
+            tbxda.value=da;
+            tbxpf.value=pf;
+            tbxgp.value=gp;
+            tbxnp.value=np;
+        }
+    </script>
+        
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>Employee Id</td>
+            <td><input type="number" id="numeid" placeholder="0"></td>
+        </tr>
+        <tr>
+            <td>Employee Name</td>
+            <td><input type="text" id="tbxename" placeholder="unknown"></td>
+        </tr>
+
+        <tr>
+            <td>Salary</td>
+            <td><input type="number" id="numsal" placeholder="0" ></td>
+        </tr>
+
+        <tr>
+            <td>House Rent Allowance</td>
+            <td><input type="text" id="tbxhra" placeholder="0"  readonly="readonly"></td>
+        </tr>
+
+        <tr>
+            <td>Dearness Allowance</td>
+            <td><input type="text" id="tbxda" placeholder="0" readonly="readonly"></td>
+        </tr>
+
+        <tr>
+            <td>Provident Fund</td>
+            <td><input type="text" id="tbxpf" placeholder="0"readonly="readonly" ></td>
+        </tr>
+
+        <tr>
+            <td>Gross Pay</td>
+            <td><input type="text" id="tbxgp" placeholder="0"readonly="readonly" ></td>
+        </tr>
+        <tr>
+            <td>Net Pay</td>
+            <td><input type="text" id="tbxnp" placeholder="0"readonly="readonly" ></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="cancel" onclick="location.href='esa.html';"></td>
+            <td><input type="button" value="Find" onclick="btnFind_onclick();"></td>
+            
+        </tr>
+
+
+    </table>
+
+</body>

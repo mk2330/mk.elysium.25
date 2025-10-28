@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+<script>
+    function btnFind_onclick(){
+      let p=nump.value;
+            p=parseFloat(p);
+            p=isNaN(p) ? 0 : p;
+        let n =numn.value;
+            n=parseFloat(n);
+            n=isNaN(n) ? 0 : n;
+       let r=numr.value;
+            r=parseFloat(r);
+            r=isNaN(r) ? 0 : r;
+        nump.value=p;
+        numn.value=n;
+        numr.value=r;
+      let si=p * n * r / 100;
+        numsi.value=si;
+      // numsi.value=nump.value*numn.value*(numr.value/100);
+        
+    }
+</script>
+</head>
+<title>Simple Interest</title>
+<table border="1">
+<tr>
+    <td>Principal</td>
+    <td><input type="number" id="nump" placeholder="0"/></td>
+</tr>
+<tr>
+    <td>Rate of Interest</td>
+    <td><input type="number" id="numr" placeholder="0"/></td>
+</tr>
+<tr>
+    <td>No.of.Months</td>
+    <td><input type="number" id="numn" placeholder="0"/></td>
+</tr>
+<tr>
+    <td>Simple Interest</td>
+    <td><input type="number" id="numsi"  readonly="readonly" placeholder="0"/></td>
+</tr>
+<tr>
+    <td><input type="button" value="Cancel" onclick="location.href='si.html';"/></td>
+    <td><input type="button" value="Find" onclick="btnFind_onclick();"/></td>
+</tr>
+</table>
