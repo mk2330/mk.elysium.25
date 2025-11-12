@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<head>
+    <link href="zlib/ucss/ualign1.css" rel="stylesheet"/>
+</head>
+<title>Electricity Bill</title>
+
 <script>
     function btnFind_onclick() {
         var cc=cbxcc.value;
@@ -94,7 +99,8 @@
        np=cuau100 + cuau200 + cuau400 + cuaa400 + tia + mc;
        tbxnp.value=np.toFixed(2); }  
 </script>
-<table border="1" width="100%">
+<table border="0" width="100%" class="center-middle">
+    <caption>Electricity Bill</caption>
     <tr><td>Consumer ID</td>
     <td><input type="number" id="numcid" placeholder="0"/></td></tr>
     <tr><td>Consumer Category</td>
@@ -169,4 +175,5 @@
         <input type="button" value="Find" onclick="btnFind_onclick();"/>
         </td>
     </tr>
+
 </table>
